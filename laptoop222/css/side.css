@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --hex: #80080;
+    --white : #fff;
+    --navy: #2877EE;
+    --hex: #ab14c2;
+    --info: #17a2b8;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --dark: #343a40;
+    --secondary: #6c757d;
+}
+
+.mt-3{
+    margin-top: 18px;
+}
+
+.mt-4{
+    margin-top: 24px;
+}
+
+.mt-5{
+    margin-top: 30px;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar{
+    background-color: var(--dark);
+    min-height: 100vh;
+    width: 20%;
+}
+
+.sidebar-brand{
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    padding: 2em 1em;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    display: flex;
+    width: 92%;
+    align-items: center;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.sidebar ul .active a{
+    color: var(--danger);
+    background-color: var(--secondary);
+    transition: .2s all;
+    font-weight: 600;
+}
+
+
+.sidebar ul li:hover a{
+    color: var(--danger);
+    background-color: var(--secondary);
+    transition: .2s all;
+    font-weight: 600;
+}
+
+.sidebar ul li a{
+    padding: .7em 1.5em;
+    width: 100%;
+    text-decoration: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: var(--white);
+}
+
+
+main{
+    width: 80%;
+    min-height: 100vh;
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+}
+
+.section-title{
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.printer-title{
+    color: var(--info);
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.tolos-title{
+    color: var(--success);
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+.tolak-title{
+    color: var(--danger);
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: capitalize;
+}

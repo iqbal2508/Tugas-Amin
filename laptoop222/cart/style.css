@@ -1,0 +1,40 @@
+/* Style untuk elemen form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Style untuk elemen form-group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Style untuk elemen label */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style untuk elemen input */
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  /* Style untuk tombol Checkout */
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #3e8e41;
+  }
+  

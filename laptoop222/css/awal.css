@@ -1,0 +1,403 @@
+/* |||||| START CSS BANNERS |||||| */
+.promo-banner img{
+	max-width:100%;
+}
+
+.full-width-conatiner {
+    width: 100%;
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.banner-full-bg {
+  	width: 100%;
+    display: block;
+    content: '';
+    height: inherit;
+    position: absolute;
+    z-index: -5;
+    left: 0%;
+}
+
+
+.collection-banner.intestinal-health .prebiotic-health-css-banner {
+    display: block;
+}
+
+.intestinal-health {
+	  background: #000000;
+    height: auto;
+    min-height: 390px;
+    width: 100%!important;
+    /*margin-top: 230px;*/
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* =====|| MAIN SRTUCTURE CSS || ===== */
+.jarrow-category-banner-container {
+      /* background: #19b3e7; */
+    height: 500px;
+    width: 400%;
+    display: block;
+    /* content: ''; */
+    /* height: inherit; */
+    position: absolute;
+    z-index: -1;
+    left: 0%;
+    top: 400px;
+}
+
+.jarrow-category-banner {
+  max-width: 1180px;
+  margin: 0px auto;
+}
+
+.jarrow-category-banner p{
+	font-family: 'Futura', sans-serif;
+}
+
+.jcb-left {
+  width:50%;
+  padding:20px;
+  /*padding-right:6vw;*/
+  
+  float:left;
+}
+.jcb-right {
+  max-width:50%;
+  float:left;
+  position:absolute;
+   right: 700px;
+}
+.jcb-right img{
+  z-index:8;
+}
+
+.white-glow {
+ 
+  z-index:0;
+  display: block;
+  position:absolute;
+  top:500px;
+  background:white;
+  box-shadow: 0 0 100px 80px rgba(245, 0, 0, 0.65);
+  height:10vw;
+  width:10vw;
+  left:4vw;
+  border-radius:50%;
+ 
+}
+
+.black-shadow {
+  z-index:0;
+  display: block;
+  position:relative;
+  bottom:-30px;
+  background:black;
+  box-shadow: 0 0 100px 80px rgba(154, 300, 90, 0.65);
+  width:20vw;
+  left:.5vw;
+  transform: scaleY(0.3);
+  border-radius:50%;
+}
+
+.black-shadow-2 {
+  z-index:0;
+  display: block;
+  position:absolute;
+  bottom:-300px;
+  background:rgb(0, 238, 127);
+  box-shadow: 0 0 30px 50px rgba(0, 0, 0, 0.2);
+  height:3px;
+  width:20vw;
+  right:.5vw;
+  transform: scaleY(0.3);
+  border-radius:50%;
+}
+
+.jarrow-category-banner h1.jarrow-category-banner h2, .jarrow-category-banner p, .jcb-right img {
+  transition: all .25s ease-in-out;
+}
+
+/* =====|| FONT HELPER CLASSES || ===== */
+.raleway {
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif;
+}
+.font-bold {
+  font-weight:600;
+}
+
+.font-normal {
+  font-weight:400;
+}
+
+.jarrow-category-banner h1, .jarrow-category-banner h2,.jarrow-category-banner h3 {
+    color: white;
+  	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, 'AppleGothic', sans-serif;
+}
+
+/* =====|| HELPER CLASSES || ===== */
+.caps-lock {
+  text-transform: uppercase;
+}
+
+.sans-serif {
+  font-family: sans-serif;
+}
+
+.border-top {
+  border-top: 1px solid white;
+}
+
+.border-bottom {
+  border-bottom: 1px solid white
+}
+
+.color-white {
+  color:white; 
+}
+.size-40 {
+  font-size: 4rem;
+}
+.size-60 {
+  font-size: 6rem;
+}
+
+
+/* || PREBIOTICS SPECIFIC || */
+.prebiotic-health-css-banner .jcb-left {
+   padding-top: 40px!important;
+}
+.prebiotic-health-cb-pic {
+  max-width:450px!important;
+  position: absolute;
+  top: 10px;
+  right: -400px;
+  
+}
+.prebiotic-health-css-banner .jcb-left{
+  padding-right:0px;
+  padding-top: 60px;
+}
+.prebiotic-health-css-banner h1 {
+  line-height:.9;
+  margin:0px;
+  font-weight:700;
+  font-size: 5rem;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.prebiotic-health-css-banner h2 {
+  line-height:1;
+  margin:0px;
+  margin-right:20px;
+  font-size:2rem;
+  font-weight:700;
+  padding-top:10px;
+  margin-bottom:15px;
+}
+
+.prebiotic-health-css-banner p {
+    line-height: 1.75;
+    margin: 0px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 90%;
+    padding-top: 10px;
+}
+.prebiotic-health-css-banner .white-glow {
+	  top: 220px;
+    width:85px;
+    height:45px;
+    left: 145px;
+} 
+.prebiotic-health-css-banner .black-shadow {
+  bottom:-70px;
+}
+.prebiotic-health-css-banner .black-shadow-2 {
+  bottom:-70px;
+}
+.section-title{
+    margin-top: 1em;
+    font-size: 2em !important;
+}
+
+.row-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    flex-basis: 22%;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 100%;
+    background-color: #f8f8f8;
+    margin-right: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0px 10px 15px 3px rgb(242, 9, 9);
+    
+}
+
+.card:last-child{
+    margin-left: 0px;
+}
+
+.card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    height: 150px;
+    
+}
+
+.card-image img{
+    width: 150px;
+   
+
+}
+
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.title-product{
+    font-size: 1.6em;
+    font-weight: 600;
+    line-height: 1.4em;
+    text-transform: capitalize;
+}
+
+.price-product{
+    font-size: 1.5em;
+    color: var(--blue);
+}
+
+.btn-add-to-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 3em;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--blue);
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.icon-to-cart{
+    margin-left: 10px;
+    font-size: 1.3em;
+}
+
+
+.container {
+    margin-left: 3em;
+}
+.form-search {
+    margin-left: auto;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+  }
+  
+  form-search {
+    margin-left: auto;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+  }
+  
+  .form-search input[type="text"] {
+    border: none;
+    border-bottom: 5px solid #00f2ff;
+    font-size: 16px;
+    padding: 5px;
+    padding-right: 300px;
+  }
+  #badge {
+    box-sizing: border-box;
+    color: #fff;
+    padding: 10px 0 0 0;
+    font-weight: 800;
+    font-family: 'Roboto Slab';
+    font-size: 30px;
+    text-align: center;
+    width: 120px;
+    height: 100px;
+    background: #fd0000;
+    border: solid 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    border-radius: 500%;
+    transform: rotate(345deg);
+    animation: 1s fadein ease-in-out;
+    -webkit-transition-delay: 3s;
+    transition-delay: 3s;
+    position: absolute;
+    opacity: 0;
+    transform: rotate(0deg);
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    animation: 1s rollin ease-in-out 2.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes roty {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rollin {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+        top: 0px;
+        right: 0px;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(345deg);
+        top: 40px;
+        right: 40px;
+    }
+}
+@keyframes growin {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

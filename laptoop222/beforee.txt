@@ -1,0 +1,100 @@
+<?php
+    require '../database/koneksi.php';
+    require '../item.php';
+
+    if (isset($_GET['id']) && !isset($_POST['update'])) {
+        $sql = 'SELECT * FROM laptop_tb WHERE idPrinter=' . $_GET['id'];
+        $result = mysqli_query($koneksi, $sql);
+        $product = mysqli_fetch_object($result);
+        $item = new Item();
+        $item->id = $product->idPrinter;
+        $item->name = $product->NamaLaptop;
+        $item->price = $product->HargaLaptop;
+        $iteminstock = 10;
+        $item->quantity = 1;
+
+        if (!isset($_SESSION['cart'])) {
+            $_SESSION['cart'] = [];
+        }
+
+        $index = -1;
+        $cart = unserialize(serialize($_SESSION['cart']));
+        for ($i = 0; $i < count($cart); $i++) {
+            if ($cart[$i]->id == $_GET['id']) {
+                $index = $i;
+                break;
+            }
+        }
+
+        if ($index == -1) {
+            $_SESSION['cart'][] = $item;
+        } else {
+            if ($cart[$index]->quantity < $iteminstock) {
+                $cart[$index]->quantity++;
+            }
+
+            $_SESSION['cart'] = $cart;
+        }  
+    }
+
+    if (isset($_GET['index']) && !isset($_POST['update'])) {
+        $cart = unserialize(serialize($_SESSION['cart']));
+        unset($cart[$_GET['index']]);
+        $cart = array_values($cart);
+        $_SESSION['cart'] = $cart;
+    }
+    
+    if (isset($_POST['update'])) {
+        $arrQuantity = $_POST['quantity'];
+        $cart = unserialize(serialize($_SESSION['cart']));
+        $notif = '';
+        for ($i = 0; $i < count($cart); $i++) {
+            $cart[$i]->quantity = $arrQuantity[$i];
+            $id = $cart[$i]->id;
+            $sql = "SELECT * FROM laptop_tb WHERE idPrinter = $id";
+            $result = mysqli_query($koneksi, $sql);
+            $product = mysqli_fetch_object($result);
+            $iteminstock = $product->stok;
+    
+            if ($cart[$i]->quantity > $iteminstock) {
+                $notif .= $cart[$i]->name . ', ';
+            }
+        }
+        if (!empty($notif)) {
+            echo '<script>alert("Maaf, ' . substr($notif, 0, -2) . ' melebihi stok yang tersedia.");</script>';
+        } else {
+            $_SESSION['cart'] = $cart;
+        }
+        // FITUR MENGURANGI BARANG DI HOME
+        foreach($cart as $item) {
+            $item_id = $item->id;
+            $item_quantity = $item->quantity;
+            $sql_update = "UPDATE laptop_tb SET stok = stok - $item_quantity WHERE IdPrinter = $item_id";
+            mysqli_query($koneksi, $sql_update);
+            
+            $sql_delete = "DELETE FROM laptop_tb WHERE stok = 0 AND IdPrinter = $item_id";
+            mysqli_query($koneksi, $sql_delete);
+        }
+        // foreach($cart as $item) {
+        //     $item_id = $item->id;
+        //     $item_quantity = $item->quantity;
+        //     $sql_check = "SELECT stok FROM laptop_tb WHERE IdPrinter = $item_id";
+        //     $result = mysqli_query($koneksi, $sql_check);
+        //     $row = mysqli_fetch_assoc($result);
+        //     $stok = $row['stok'];
+        
+        //     if ($stok - $item_quantity >= 0) {
+        //         $sql_update = "UPDATE laptop_tb SET stok = stok - $item_quantity WHERE IdPrinter = $item_id";
+        //         mysqli_query($koneksi, $sql_update);
+        //     } else {
+        //         $sql_update = "UPDATE laptop_tb SET stok = 'Stok Barang Habis' WHERE IdPrinter = $item_id";
+        //         mysqli_query($koneksi, $sql_update);
+        //     }
+        // }
+        
+        
+        // FITUR MENGURANGI BARANG DI HOME
+
+    }
+    
+    ?>

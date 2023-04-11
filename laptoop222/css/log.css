@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --navy: #0E2A47;
+    --primary: #007bff;
+    --info: #17a2b8;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --dark: #343a40;
+    --secondary: #6c757d;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(40%2c 119%2c 238%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c404.179C100.5%2c411.98%2c208.428%2c510.725%2c292.001%2c454.363C376.175%2c397.596%2c343.13%2c263.718%2c357.336%2c163.19C367.598%2c90.573%2c374.24%2c20.284%2c363.596%2c-52.277C352.979%2c-124.651%2c339.902%2c-197.952%2c295.797%2c-256.309C250.006%2c-316.897%2c183.983%2c-357.683%2c112.79%2c-384.128C37.835%2c-411.971%2c-40.99%2c-417.51%2c-120.685%2c-411.015C-216.712%2c-403.189%2c-335.089%2c-417.755%2c-395.502%2c-342.704C-456.231%2c-267.259%2c-415.246%2c-154.459%2c-404.694%2c-58.186C-396.421%2c17.293%2c-362.642%2c82.929%2c-340.876%2c155.673C-314.86%2c242.62%2c-337.589%2c357.72%2c-264.252%2c411.184C-191.578%2c464.165%2c-89.666%2c397.219%2c0%2c404.179' fill='%23105cce'%3e%3c/path%3e%3cpath d='M1440 1236.74C1568.175 1251.0259999999998 1701.6019999999999 1204.04 1801.3980000000001 1122.347 1896.702 1044.3310000000001 1915.924 912.678 1970.658 802.344 2027.603 687.551 2157.951 585.812 2129.544 460.859 2100.775 334.315 1939.151 296.156 1837.297 215.74 1756.641 152.06 1689.658 73.55099999999999 1593.402 37.561000000000035 1492.228-0.2680000000000291 1379.638-28.590000000000032 1277.452 6.413000000000011 1176.624 40.95100000000002 1118.07 140.12099999999998 1051.353 223.235 987.102 303.276 935.204 386.961 895.878 481.767 844.905 604.652 737.862 734.521 788.185 857.674 838.135 979.914 1012.7629999999999 980.784 1126.915 1047.17 1234.559 1109.771 1316.243 1222.946 1440 1236.74' fill='%235c98f2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.container {
+    width: 400px;
+    min-height: 400px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    padding: 40px 30px;
+}
+
+.container .login-text {
+    color: #111;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: capitalize;
+}
+
+.container .login-email .input-group {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.container .login-email .input-group input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e7e7e7;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: transparent;
+    outline: none;
+    transition: .3s;
+}
+
+.container .login-email .input-group input:focus,
+.container .login-email .input-group input:valid {
+    border-color: #2877EE;
+}
+
+.container .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #2877EE;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.container .login-email .input-group .btn:hover {
+    background: transparent;
+    color : #2877EE;
+    border: 4px solid #2877EE; 
+}
+
+.login-register-text {
+    color: #111;
+    font-weight: 600;
+}
+
+.login-register-text a {
+    text-decoration: none;
+    color: #2877EE;
+}
+
+.container-logout {
+    width: 500px;
+    min-height: 200px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    padding: 40px 30px;
+}
+
+.container-logout .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #a29bfe;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 20px;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--primary);
+    text-align: center;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+@media (max-width: 430px) {
+    .container {
+        width: 300px;
+    }
+}
+.title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 15px 15px;
+  background: linear-gradient(-135deg, #ff0000, #ee00b3);
+}
